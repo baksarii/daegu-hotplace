@@ -1,15 +1,6 @@
 import React from "react"; // 리액트 라이브러리 불러오기 
 
-const contactText = [
-    {
-        link: "https://open.kakao.com/o/gM7YLzwf",
-        title: "KAKAO : webstupids",
-    },
-    {
-        link: "mailto:webstoryboy@naver.com",
-        title: "mail : webstoryboy@naver.com",
-    },
-];
+import { contactText } from "../constants";
 
 const Contact = () => {
     return (
