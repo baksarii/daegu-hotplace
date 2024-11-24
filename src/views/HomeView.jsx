@@ -22,7 +22,6 @@ const HomeView = () => {
         <Main>
             <Intro />
             <Skill />
-            <Site />
             <Port />
             <Contact />
         </Main>

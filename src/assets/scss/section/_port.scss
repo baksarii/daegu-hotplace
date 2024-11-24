@@ -23,6 +23,8 @@
           font-size: 1.25rem;
           font-weight: 400;
           line-height: 2;
+          position: relative; /* 위치 조정을 활성화 */
+          top: -5px; /* 위로 올림 (값을 조정하세요) */
       }
   }
   .port__wrap {

@@ -6,7 +6,7 @@ const Port = () => {
         <section id="port">
             <div className="port__inner">
                 <div className="port__title">
-                    portfolio <em>포폴 작업물</em>
+                    Best <em>주인장이 추천하는 Best 맛집</em>
                 </div>
                 <div className="port__wrap">
                     {portText.map((port, key) => (
