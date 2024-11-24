@@ -2,27 +2,26 @@ import port01 from "../assets/img/port01.jpg";
 import port02 from "../assets/img/port02.jpg";
 import port03 from "../assets/img/port03.jpg";
 
-
 export const headerNav = [
     {
         title: "intro",
-        url: "#intro"
+        url: "#intro" // 앵커 방식
     },
     {
         title: "introduction",
-        url: "#skill"
+        url: "#skill" // 앵커 방식
     },
     {
         title: "hotplace",
-        url: "#hotplace"
+        url: "/hotplace" // React Router 방식
     },
     {
         title: "best",
-        url: "#port"
+        url: "#port" // 앵커 방식
     },
     {
         title: "contact",
-        url: "#contact"
+        url: "#contact" // 앵커 방식
     }
 ];
 
