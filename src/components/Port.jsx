@@ -12,12 +12,12 @@ const Port = () => {
                     {portText.map((port, key) => (
                         <article className={`port__item p${key + 1}`} key={key}>
                             <span className="num">{port.num}.</span>
-                            <a href={port.code} target="_blank" className="img" rel="noreferrer">
+                            <div className="img">
                                 <img src={port.img} alt={port.name} />
-                            </a>
+                            </div>
                             <h3 className="title">{port.title}</h3>
                             <p className="desc">{port.desc}</p>
-                            <a href={port.view} target="_blank" className="site" rel="noreferrer">사이트 보기</a>
+                            <a href={port.view} target="_blank" className="site" rel="noreferrer">위치와 리뷰 보기</a>
                         </article>
                     ))}
                 </div>

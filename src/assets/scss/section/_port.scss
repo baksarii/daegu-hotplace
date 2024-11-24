@@ -28,9 +28,12 @@
       }
   }
   .port__wrap {
-      display: flex;
-      flex-wrap: wrap;
-      width: 7000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* 가로 방향 중앙 정렬 */
+    align-items: center;    /* 세로 방향 중앙 정렬 */
+    width: auto;            /* 가로 스크롤 제거 */
+    gap: 20px;              /* 요소 간 간격 */
 
       .port__item {
           width: 500px;
@@ -38,6 +41,8 @@
           background-color: var(--subBg100);
           padding: 2.5rem;
           margin-right: 20px;
+          text-align: center;
+          margin: 10px auto;
 
           &.p1 {
               background-color: var(--subBg100);
@@ -47,27 +52,6 @@
           }
           &.p3 {
               background-color: var(--subBg300);
-          }
-          &.p4 {
-              background-color: var(--subBg400);
-          }
-          &.p5 {
-              background-color: var(--subBg500);
-          }
-          &.p6 {
-              background-color: var(--subBg100);
-          }
-          &.p7 {
-              background-color: var(--subBg200);
-          }
-          &.p8 {
-              background-color: var(--subBg300);
-          }
-          &.p9 {
-              background-color: var(--subBg400);
-          }
-          &.p10 {
-              background-color: var(--subBg500);
           }
           .num {
               font-size: 2rem;
