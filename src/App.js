@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 import HomeView from "./views/HomeView";
 import Hotplace from "./components/hotplace";
+import "./assets/scss/style.scss"; // 글로벌 SCSS 적용
+
 
 import lenis from "./utils/lenis";
 import link from "./utils/link";
