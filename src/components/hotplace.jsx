@@ -11,8 +11,25 @@ const Hotplace = () => {
                 {hotplaces.map((place) => (
                     <li key={place.id} className="hotplace__item">
                         <h2 className="hotplace__name">{place.name}</h2>
+                        <img
+                            src={place.img}
+                            alt={place.name}
+                            className="hotplace__image"
+                        />
+                        <p className="hotplace__address">📍 {place.address}</p>
+                        <p className="hotplace__phone">☎️ {place.phone}</p>
+                        <div className="hotplace__menu">
+                            <h3>🍴 메뉴 및 가격</h3>
+                            <ul>
+                                {place.menu.map((item, index) => (
+                                    <li key={index} className="hotplace__menu-item">
+                                        {item.name} - {item.price}원
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                        <p className="hotplace__hours">⏰ 영업시간: {place.hours}</p>
                         <p className="hotplace__desc">{place.description}</p>
-                        <p className="hotplace__address">{place.address}</p>
                     </li>
                 ))}
             </ul>

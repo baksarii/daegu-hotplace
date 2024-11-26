@@ -1,106 +1,121 @@
 #port {
-  width: 100%;
-  margin-top: 30vh;
-  // overflow: hidden;
-}
-.port__inner {
-  padding: 16px;
-
-  .port__title {
-      width: 100%;
-      height: 5vw;
-      font-size: 4vw;
-      font-weight: 900;
-      line-height: 1.6;
-      font-family: var(--mainKor-font);
-      text-transform: uppercase;
-      color: var(--black100);
-      border-bottom: 0.4vw solid var(--black100);
-      margin-bottom: 16px;
-      text-indent: -0.26vw;
-
-      em {
+    width: 100%;
+    margin-top: 30vh;
+    .port__inner {
+      padding: 16px;
+  
+      .port__title {
+        width: 100%;
+        height: auto; /* 높이를 글자 내용에 따라 조정 */
+        font-size: 4vw;
+        font-weight: 900;
+        line-height: 1.2; /* 글자 간격 줄여서 높이 문제 해결 */
+        font-family: var(--mainKor-font);
+        text-transform: uppercase;
+        color: var(--black100);
+        border-bottom: 0.4vw solid var(--black100);
+        margin-bottom: 16px;
+        text-indent: -0.26vw;
+        padding-bottom: 0.5rem; /* 텍스트 아래 여백 추가 */
+  
+        em {
           font-size: 1.25rem;
           font-weight: 400;
-          line-height: 2;
-          position: relative; /* 위치 조정을 활성화 */
-          top: -5px; /* 위로 올림 (값을 조정하세요) */
+          line-height: 1.5; /* 글자 간격 조정 */
+          position: relative;
+          top: -5px; /* 필요에 따라 조정 */
+          display: inline-block; /* 글자 잘림 방지 */
+          vertical-align: middle; /* 텍스트 중앙 정렬 */
+        }
       }
-  }
-  .port__wrap {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* 가로 방향 중앙 정렬 */
-    align-items: center;    /* 세로 방향 중앙 정렬 */
-    width: auto;            /* 가로 스크롤 제거 */
-    gap: 20px;              /* 요소 간 간격 */
-
-      .port__item {
-          width: 500px;
+  
+      .port__wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: stretch; /* 아이템 세로 정렬 */
+        gap: 20px;
+  
+        .port__item {
+          width: 480px; /* 고정 너비를 조정 */
           height: 70vh;
           background-color: var(--subBg100);
           padding: 2.5rem;
-          margin-right: 20px;
+          margin: 10px;
           text-align: center;
-          margin: 10px auto;
-
+          transition: background-color 0.3s, transform 0.3s;
+  
+          &:hover {
+            transform: translateY(-10px); /* hover 효과 추가 */
+          }
+  
           &.p1 {
-              background-color: var(--subBg100);
+            background-color: var(--subBg100);
           }
           &.p2 {
-              background-color: var(--subBg200);
+            background-color: var(--subBg200);
           }
           &.p3 {
-              background-color: var(--subBg300);
+            background-color: var(--subBg300);
           }
+  
           .num {
-              font-size: 2rem;
-              font-family: var(--mainNum-font);
+            font-size: 2rem;
+            font-family: var(--mainNum-font);
+            margin-bottom: 0.5rem; /* 숫자와 이미지 간격 조정 */
           }
+  
           .img {
-              display: block;
-              margin-top: -20px;
-              transition: margin-top 0.3s;
-
+            display: block;
+            margin-top: -20px;
+            transition: margin-top 0.3s, filter 0.3s;
+  
+            img {
+              border-radius: 5px;
+              filter: saturate(0%);
+              width: 100%; /* 이미지 크기 조정 */
+              height: auto;
+            }
+  
+            &:hover {
+              margin-top: 0;
+  
               img {
-                  border-radius: 5px;
-                  filter: saturate(0%);
-                  transition: all 0.3s;
+                filter: saturate(100%);
               }
-              
-              &:hover {
-                  margin-top: 0;
-
-                  img {
-                      filter: saturate(100%);
-                  }
-              }
+            }
           }
+  
           .title {
-              font-size: 1.5rem;
-              text-align: center;
-              padding: 0.8rem 0;
-              font-weight: 700;
-              color: var(--black100);
-              border-bottom: 2px solid var(--black100);
-              margin-bottom: 1rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--black100);
+            text-align: center;
+            border-bottom: 2px solid var(--black100);
+            margin: 1rem 0;
+            padding-bottom: 0.8rem;
           }
+  
           .desc {
-              font-size: 1rem;
+            font-size: 1rem;
+            line-height: 1.5; /* 가독성 개선 */
+            margin-bottom: 1rem;
           }
+  
           .site {
-              border: 1px solid var(--black100);
-              display: block;
-              text-align: center;
-              padding: 0.625rem 1.5rem;
-              margin-top: 1.5rem;
-              transition: all 0.2s;
-
-              &:hover {
-                  background-color: var(--black100);
-                  color: var(--white);
-              }
+            border: 1px solid var(--black100);
+            text-align: center;
+            padding: 0.625rem 1.5rem;
+            margin-top: 1.5rem;
+            transition: all 0.2s;
+  
+            &:hover {
+              background-color: var(--black100);
+              color: var(--white);
+            }
           }
+        }
       }
+    }
   }
-}
+  
